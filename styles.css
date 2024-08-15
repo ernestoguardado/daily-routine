@@ -11,7 +11,42 @@ body {
 .container {
   background-color: #fff;
   padding: 20px;
-  width: 300px;
+  /* width: 300px; */
   box-shadow: 0 0 10px 20px rgb(0, 0, 0, 0.1);
   text-align: center;
 }
+
+.inputContainer {
+display: flex;
+justify-content: center;
+margin-bottom: 20px;
+}
+
+#inputTask {
+  height: 30px;
+  width: 250px;
+}
+
+button {
+ height: 35px;
+}
+.doTaskContainer {
+
+}
+.taskItem {
+  width: 300px;
+  max-height: 40px;
+  /* Ejemplo de ancho fijo */
+  padding: 10px;
+  border: 0.5px solid #ccc;
+  border-radius: 4px;
+  overflow-wrap: break-word;
+  /* Asegura que el texto se ajuste al ancho disponible */
+  word-break: break-word;
+  /* Rompe palabras largas si es necesario */
+  white-space: normal;
+  overflow-y: scroll;
+  margin-bottom: 10px;
+  scroll-padding-top: 2px;
+}
+
