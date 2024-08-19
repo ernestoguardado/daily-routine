@@ -1,25 +1,31 @@
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #f4f4f4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
 }
 
 .container {
+  width: 90%;
   background-color: #fff;
   padding: 20px;
-  /* width: 300px; */
-  box-shadow: 0 0 10px 20px rgb(0, 0, 0, 0.1);
+  margin: 20px 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
   text-align: center;
+  height: calc(100vh - 20px);
 }
+
+
 
 .inputContainer {
 display: flex;
 justify-content: center;
-margin-bottom: 20px;
+
 }
 
 #inputTask {
@@ -28,25 +34,78 @@ margin-bottom: 20px;
 }
 
 button {
- height: 35px;
+  margin: 2px 20px;
 }
-.doTaskContainer {
 
+ul {
+  max-height: calc(100vh - 150px);
+  overflow-y: auto;
+  list-style-type: none;
+  padding: 0px;
+  margin: 10px;
 }
+
+
+
+.containerButtons {
+  display: flex;
+  max-width: 100px;
+  
+  justify-content: space-between;
+}
+
+
+.containerTaskItem {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  border-radius: 4px;
+  border: 0.5px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
 .taskItem {
-  width: 300px;
+  /* width: 300px; */
   max-height: 40px;
+  list-style-type: none;
   /* Ejemplo de ancho fijo */
   padding: 10px;
-  border: 0.5px solid #ccc;
-  border-radius: 4px;
+  /* border-radius: 4px; */
   overflow-wrap: break-word;
   /* Asegura que el texto se ajuste al ancho disponible */
   word-break: break-word;
   /* Rompe palabras largas si es necesario */
   white-space: normal;
   overflow-y: scroll;
-  margin-bottom: 10px;
+  margin-bottom: 4px;
   scroll-padding-top: 2px;
 }
 
+/* @media (height: 700px) {
+  ul {
+      background-color: #fff;
+      padding: 20px;
+      box-shadow: 0 0 10px 20px rgb(0, 0, 0, 0.1);
+      text-align: center;
+    }
+} */
+
+/* @media (min-width: 700px) {
+  .container {
+    width: 60%;
+
+  }
+} */
+
+@media (min-width: 1024px) {
+  .todo-container {
+    width: 40%;
+    /* Menor proporción en pantallas más amplias
+  }
+
+  .todo-title {
+    font-size: 2rem;
+    /* Tamaño de texto más grande en pantallas amplias */
+  }
+} 
